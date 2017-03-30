@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>手势密码</title>
+	<link rel="stylesheet" type="text/css" href="lockScreen.css">
+</head>
+<body>
+<div class="con">
+	<div class="header">
+		<h3>手势密码</h3>
+	</div>
+	<div id="wrap"></div>
+	<div id="lWarning"></div>
+	<div class="radios">
+		<label><input type="radio" name="opt" id="setPwd" checked>设置密码</label>
+		<label><input type="radio" name="opt" id="checkPwd">验证密码</label>
+	</div>
+</div>
+
+<script type="text/javascript" src="lockScreen.js"></script>
+<script type="text/javascript">
+	var option = {
+		width: 300, // 画布的宽
+		height: 300, // 画布的高
+		container: 'wrap', // 画布位置的Id
+	}
+	var lock = new lockScreen(option);
+	lock.init();
+</script>
+</body>
+</html>
